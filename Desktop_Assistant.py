@@ -19,15 +19,15 @@ def Speak(st):
     engine.runAndWait()
 
 
-def Wish_me():
+def Wish_me(user):
     '''Assistant will wish me according to the time'''
     now = datetime.datetime.now().hour
     if 0 <= now < 12:
-        Speak("Good Morning Saheb, I am Jini. How may I help you?")
+        Speak(f"Good Morning {user}, I am Jini. How may I help you?")
     elif 12 <= now < 18:
-        Speak("Good Afternoon Saheb, I am Jini . How may I help you?")
+        Speak(f"Good Afternoon {user}, I am Jini . How may I help you?")
     else:
-        Speak("Good Evening Snehashis ,I am Jini . How may I help you?")
+        Speak(f"Good Evening {user},I am Jini . How may I help you?")
 
 
 def Todays_news():
@@ -103,7 +103,8 @@ def user_name_Recognition():
 
 if __name__ == '__main__':
     wapp_contact_list = {'man': '+918240907556', 'dada': '+919082963983', 'baba': '+918240910349'}
-    Wish_me()
+    user_name=input("Before starting your virtual assistant please give us your name:")
+    Wish_me(user_name)
     while True:
         query = Recognizing().lower()
         if ('wikipedia' in query) or ('who is ' in query):
