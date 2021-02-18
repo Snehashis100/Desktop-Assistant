@@ -102,7 +102,7 @@ def user_name_Recognition():
 
 
 if __name__ == '__main__':
-    wapp_contact_list = {'man': '+918240907556', 'dada': '+919082963983', 'baba': '+918240910349'}
+    wapp_contact_list = {'man': '+91**********', 'dada': '+91**********', 'baba': '+91**********'}
     user_name=input("Before starting your virtual assistant please give us your name:")
     Wish_me(user_name)
     while True:
@@ -190,7 +190,7 @@ if __name__ == '__main__':
                 Speak("To which group you want to send the message")
                 group = Recognizing()
                 print("Sending....")
-                wapp.sendwhatmsg_to_group('HO5GfKolaVOC7tRlWHMYgf', msg_to_sent, hour, minute, wait_time=30)
+                wapp.sendwhatmsg_to_group('*******************', msg_to_sent, hour, minute, wait_time=30)
                 Speak("Your message has been sent to the group successfully")
 
             else:
